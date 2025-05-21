@@ -1,0 +1,2 @@
+This directory will contain AI model files for damage detection.
+Models will be either trained or pre-trained based on project requirements.
