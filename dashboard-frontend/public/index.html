@@ -1,20 +1,66 @@
 <!DOCTYPE html>
+<!--
+  Charity Platform Dashboard - Main HTML Template
+  
+  This is the main HTML template for the Charity Platform Dashboard frontend application.
+  It serves as the entry point for the React application and provides the basic
+  structure and metadata for the web application.
+  
+  The actual content of the application is dynamically rendered by React into
+  the root div element. This file primarily contains metadata, links to resources,
+  and the base HTML structure.
+  
+  Author: Charity Platform Team
+-->
 <html lang="en">
   <head>
+    <!-- Character encoding for the document -->
     <meta charset="utf-8" />
+    
+    <!-- Favicon for browser tabs and bookmarks -->
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    
+    <!-- Responsive viewport settings for mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Theme color for browser UI elements in supporting browsers -->
     <meta name="theme-color" content="#000000" />
+    
+    <!-- Website description for search engines and social media sharing -->
     <meta
       name="description"
-      content="Charity Platform Dashboard"
+      content="Charity Platform Dashboard - A comprehensive management interface for the charity platform that enables donation tracking, campaign management, and beneficiary support."
     />
+    
+    <!-- Apple touch icon for iOS devices when added to home screen -->
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    
+    <!-- Web app manifest for Progressive Web App functionality -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Title displayed in browser tab -->
     <title>Charity Platform</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- 
+      Message displayed when JavaScript is disabled in the browser.
+      The application requires JavaScript to function properly.
+    -->
+    <noscript>
+      You need to enable JavaScript to run this app. This application relies on JavaScript
+      to provide its interactive features and functionality.
+    </noscript>
+    
+    <!-- 
+      Root DOM element where the React application will be mounted.
+      All dynamic content will be rendered inside this element.
+    -->
     <div id="root"></div>
+    
+    <!-- 
+      The React application's JavaScript bundle will be injected here by the
+      build process. No explicit script tags are needed as Create React App
+      handles this automatically.
+    -->
   </body>
 </html>
