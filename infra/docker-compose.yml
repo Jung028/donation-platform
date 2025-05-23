@@ -1,0 +1,71 @@
+version: '3.8'
+
+services:
+  discovery-service:
+    build: ../microservices/discovery-service
+    ports:
+      - "8761:8761"
+    environment:
+      - SPRING_APPLICATION_NAME=discovery-service
+      - SPRING_CLOUD_CONFIG_ENABLED=false
+
+  account-service:
+    build: ../microservices/account-service
+    ports:
+      - "8081:8081"
+    environment:
+      - SPRING_APPLICATION_NAME=account-service
+      - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://discovery-service:8761/eureka/
+    depends_on:
+      - discovery-service
+
+  donation-service:
+    build: ../microservices/donation-service
+    ports:
+      - "8082:8082"
+    environment:
+      - SPRING_APPLICATION_NAME=donation-service
+      - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://discovery-service:8761/eureka/
+    depends_on:
+      - discovery-service
+
+  transaction-service:
+    build: ../microservices/transaction-service
+    ports:
+      - "8083:8083"
+    environment:
+      - SPRING_APPLICATION_NAME=transaction-service
+      - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://discovery-service:8761/eureka/
+    depends_on:
+      - discovery-service
+
+  notification-service:
+    build: ../microservices/notification-service
+    ports:
+      - "8084:8084"
+    environment:
+      - SPRING_APPLICATION_NAME=notification-service
+      - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://discovery-service:8761/eureka/
+    depends_on:
+      - discovery-service
+
+  frontend:
+    build: ../dashboard-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - account-service
+      - donation-service
+      - transaction-service
+      - notification-service
+
+  ai-detector:
+    build: ../ai-damage-detector
+    ports:
+      - "5000:5000"
+    environment:
+      - AZURE_STORAGE_CONNECTION_STRING=${AZURE_STORAGE_CONNECTION_STRING}
+    volumes:
+      - ../ai-damage-detector/model:/app/model

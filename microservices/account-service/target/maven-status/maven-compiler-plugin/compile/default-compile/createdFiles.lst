@@ -1,10 +1,3 @@
-com/charityplatform/accountservice/controller/AuthenticationController$RegisterRequest.class
-com/charityplatform/accountservice/controller/AuthenticationController$LoginRequest.class
+com/charityplatform/accountservice/config/SecurityConfig.class
 com/charityplatform/accountservice/AccountServiceApplication.class
-com/charityplatform/accountservice/util/AccountNumberGenerator.class
-com/charityplatform/accountservice/controller/AuthenticationController.class
-com/charityplatform/accountservice/model/User$UserType.class
-com/charityplatform/accountservice/model/Role.class
-com/charityplatform/accountservice/model/User.class
-com/charityplatform/accountservice/model/Role$RoleName.class
-com/charityplatform/accountservice/model/Account.class
+com/charityplatform/accountservice/controller/AuthController.class
