@@ -1,6 +1,0 @@
-flask==2.3.3
-gunicorn==21.2.0
-pillow==10.1.0
-numpy==1.26.2
-# tensorflow==2.14.0
-# opencv-python==4.8.1.78
