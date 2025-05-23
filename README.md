@@ -1,35 +1,29 @@
-# Charity Platform
+# Charity Donation Platform
 
-A comprehensive platform for managing donations to disaster areas with real-time tracking and AI-based damage assessment.
+A microservices-based platform for managing charity donations and accounts.
 
 ## Project Structure
 
-- **microservices/** - Backend services built with Spring Boot
-  - account-service - Manages donor and charity accounts, balances, and authentication
-  - donation-service - Accepts donation requests, validates funds, triggers transactions
-  - transaction-service - Coordinates distributed transactions, handles 2-phase commit logic
-  - notification-service - Sends real-time updates to donors
-
-- **dashboard-frontend/** - Web-based dashboard built with React
-  - Visualizes donations, real-time transaction status, heatmaps, and audit logs
-  - Connects with notification-service for live updates
-
-- **ai-damage-detector/** - Python service for damage detection in drone images
-  - Uses ML/Computer Vision models to identify high damage zones
-  - Helps with dynamic donation routing
-
-- **infra/** - Infrastructure automation and containerization
-  - Docker Compose configuration for local development
-  - Deployment automation for cloud environments
+```
+donation-platform/
+├── microservices/
+│   ├── account-service/     # Handles user accounts and authentication
+│   └── discovery-service/   # Service discovery configuration
+├── pom.xml                 # Project configuration
+└── LICENSE
+```
 
 ## Getting Started
 
-[TBD]
+1. Clone the repository
+2. Navigate to each microservice directory
+3. Build and run each service using Maven
 
-## Development
+## Services
 
-[TBD]
+- **Account Service**: Manages user accounts, authentication, and balances
+- **Discovery Service**: Provides service discovery using Eureka
 
-## Deployment
+## License
 
-[TBD]
+This project is licensed under the terms of the LICENSE file.
