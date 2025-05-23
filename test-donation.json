@@ -1,0 +1,7 @@
+{
+    "donorName": "John Doe",
+    "amount": 100.00,
+    "donationType": "ONE_TIME",
+    "charityName": "Children's Foundation",
+    "message": "Supporting education"
+}
