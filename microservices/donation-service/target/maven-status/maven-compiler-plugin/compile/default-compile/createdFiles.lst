@@ -1,0 +1,7 @@
+com/charityplatform/donationservice/repository/DonationRepository.class
+com/charityplatform/donationservice/model/DonationStatus.class
+com/charityplatform/donationservice/controller/DonationController.class
+com/charityplatform/donationservice/model/DonationType.class
+com/charityplatform/donationservice/service/DonationService.class
+com/charityplatform/donationservice/model/Donation.class
+com/charityplatform/donationservice/DonationServiceApplication.class

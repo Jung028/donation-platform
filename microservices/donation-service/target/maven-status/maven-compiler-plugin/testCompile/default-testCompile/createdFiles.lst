@@ -1,0 +1,3 @@
+com/charityplatform/donationservice/config/TestConfig.class
+com/charityplatform/donationservice/controller/DonationControllerTest.class
+com/charityplatform/donationservice/service/DonationServiceTest.class
